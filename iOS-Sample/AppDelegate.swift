@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import AppCenter
+import AppCenterAnalytics
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,6 +16,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        AppCenter.start(withAppSecret: "132ae08c-351a-4d76-b535-1e7e5212bf2e", services:[
+          Analytics.self
+        ])
         return true
     }
 

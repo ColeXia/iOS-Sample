@@ -13,6 +13,9 @@
 		ED599E9C29EE8F3C0071B4A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED599E9A29EE8F3C0071B4A3 /* Main.storyboard */; };
 		ED599E9E29EE8F3E0071B4A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED599E9D29EE8F3E0071B4A3 /* Assets.xcassets */; };
 		ED599EA129EE8F3E0071B4A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED599E9F29EE8F3E0071B4A3 /* LaunchScreen.storyboard */; };
+		ED599EAA29EE90820071B4A3 /* AppCenterAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = ED599EA929EE90820071B4A3 /* AppCenterAnalytics */; };
+		ED599EAC29EE90820071B4A3 /* AppCenterCrashes in Frameworks */ = {isa = PBXBuildFile; productRef = ED599EAB29EE90820071B4A3 /* AppCenterCrashes */; };
+		ED599EAE29EE90820071B4A3 /* AppCenterDistribute in Frameworks */ = {isa = PBXBuildFile; productRef = ED599EAD29EE90820071B4A3 /* AppCenterDistribute */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +34,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED599EAA29EE90820071B4A3 /* AppCenterAnalytics in Frameworks */,
+				ED599EAC29EE90820071B4A3 /* AppCenterCrashes in Frameworks */,
+				ED599EAE29EE90820071B4A3 /* AppCenterDistribute in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +89,11 @@
 			dependencies = (
 			);
 			name = "iOS-Sample";
+			packageProductDependencies = (
+				ED599EA929EE90820071B4A3 /* AppCenterAnalytics */,
+				ED599EAB29EE90820071B4A3 /* AppCenterCrashes */,
+				ED599EAD29EE90820071B4A3 /* AppCenterDistribute */,
+			);
 			productName = "iOS-Sample";
 			productReference = ED599E9129EE8F3C0071B4A3 /* iOS-Sample.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +122,9 @@
 				Base,
 			);
 			mainGroup = ED599E8829EE8F3C0071B4A3;
+			packageReferences = (
+				ED599EA829EE90820071B4A3 /* XCRemoteSwiftPackageReference "appcenter-sdk-apple" */,
+			);
 			productRefGroup = ED599E9229EE8F3C0071B4A3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -285,8 +299,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = R27MT28R2X;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "iOS-Sample/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -299,8 +316,10 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.appcenter.cole.iOS-Sample";
+				PRODUCT_BUNDLE_IDENTIFIER = com.appcenter.cole;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = 03092023;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -312,8 +331,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = R27MT28R2X;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "iOS-Sample/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -326,8 +348,10 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.appcenter.cole.iOS-Sample";
+				PRODUCT_BUNDLE_IDENTIFIER = com.appcenter.cole;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = 03092023;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -356,6 +380,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		ED599EA829EE90820071B4A3 /* XCRemoteSwiftPackageReference "appcenter-sdk-apple" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/microsoft/appcenter-sdk-apple.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		ED599EA929EE90820071B4A3 /* AppCenterAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ED599EA829EE90820071B4A3 /* XCRemoteSwiftPackageReference "appcenter-sdk-apple" */;
+			productName = AppCenterAnalytics;
+		};
+		ED599EAB29EE90820071B4A3 /* AppCenterCrashes */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ED599EA829EE90820071B4A3 /* XCRemoteSwiftPackageReference "appcenter-sdk-apple" */;
+			productName = AppCenterCrashes;
+		};
+		ED599EAD29EE90820071B4A3 /* AppCenterDistribute */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ED599EA829EE90820071B4A3 /* XCRemoteSwiftPackageReference "appcenter-sdk-apple" */;
+			productName = AppCenterDistribute;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = ED599E8929EE8F3C0071B4A3 /* Project object */;
 }
